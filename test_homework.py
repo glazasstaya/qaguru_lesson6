@@ -53,23 +53,17 @@ def test_find_suitable_user():
     #  найдите пользователя с именем "Olga"
     suitable_users = None
 
-    for i in range(len(users)):
-        for v in users[i].values():
-            if v == 'Olga':
-                suitable_users = users[i]
-                break
-        if suitable_users != None:
-            break
+    for k in users:
+        if k['name'] == 'Olga':
+            suitable_users = k
 
     assert suitable_users == {"name": "Olga", "age": 45}
 
     #  найдите всех пользователей младше 20 лет
     suitable_users = []
-    for i in range(len(users)):
-        for k, v in users[i].items():
-            if k == 'age':
-                if v < 20:
-                    suitable_users.append(users[i])
+    for k in users:
+        if k['age'] < 20:
+            suitable_users.append(k)
 
     assert suitable_users == [
         {"name": "Stanislav", "age": 15},

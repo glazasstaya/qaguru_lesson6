@@ -7,7 +7,7 @@ def test_dark_theme_by_time():
     """
     current_time = time(hour=23)
 
-    # TODO переключите темную тему в зависимости от времени суток (с 22 до 6 часов утра - ночь)
+    # переключите темную тему в зависимости от времени суток (с 22 до 6 часов утра - ночь)
     is_dark_theme = None
     if time(hour=6) <= current_time < time(hour=22):
         is_dark_theme = False
@@ -26,7 +26,7 @@ def test_dark_theme_by_time_and_user_choice():
     """
     current_time = time(hour=16)
     dark_theme_enabled_by_user = True
-    # TODO переключите темную тему в зависимости от времени суток,
+    #  переключите темную тему в зависимости от времени суток,
     #  но учтите что темная тема может быть включена вручную
     is_dark_theme = None
 
@@ -53,7 +53,7 @@ def test_find_suitable_user():
         {"name": "Olga", "age": 45},
         {"name": "Maria", "age": 18},
     ]
-    # TODO найдите пользователя с именем "Olga"
+    #  найдите пользователя с именем "Olga"
     suitable_users = None
 
     for i in range(len(users)):
@@ -66,7 +66,7 @@ def test_find_suitable_user():
 
     assert suitable_users == {"name": "Olga", "age": 45}
 
-    # TODO найдите всех пользователей младше 20 лет
+    #  найдите всех пользователей младше 20 лет
     suitable_users = []
     for i in range(len(users)):
         for k, v in users[i].items():
@@ -89,6 +89,12 @@ def test_find_suitable_user():
 # сделать буквы заглавными (или первую букву), затем вывести значения всех аргументов этой функции:
 # >>> open_browser(browser_name="Chrome")
 # "Open Browser [Chrome]"
+
+
+def print_functionand_agguments(func_name, *args):
+    print()
+
+
 
 def test_readable_function():
     open_browser(browser_name="Chrome")

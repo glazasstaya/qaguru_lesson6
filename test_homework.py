@@ -90,6 +90,7 @@ def test_readable_function():
 def formated_string(func_name, *args):
     formated_func_name = func_name.replace('_', ' ').title()
     arguments = f" [{', '.join(args)}]"
+    print(formated_func_name + arguments)
     return formated_func_name + arguments
 
 
